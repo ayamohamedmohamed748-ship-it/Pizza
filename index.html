@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيتزا ماستر | أشهى بيتزا إيطالية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- الهيدر وشريط التنقل -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#home" class="logo">
+                <i class="fas fa-pizza-slice"></i> بيتزا <span>ماستر</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#menu">المنيو</a>
+                <a href="#about">مميزاتنا</a>
+                <a href="#contact">تواصل معنا</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="open-cart-btn" aria-label="فتح السلة">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="القائمة">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text hero-animate">
+                <span class="badge">توصيل سريع خلال 30 دقيقة</span>
+                <h1>طعم البيتزا الإيطالية الأصلية على أصولها!</h1>
+                <p>عجينة مخمرة بعناية يومياً، صلصة طماطم طبيعية، وجبن موزاريلا غني يذوب مع كل لقمة، تصلك ساخنة حتى باب بيتك.</p>
+                <div class="hero-btns">
+                    <a href="#menu" class="btn-primary">تصفح المنيو <i class="fas fa-arrow-left"></i></a>
+                    <a href="#about" class="btn-outline">اعرف المزيد</a>
+                </div>
+            </div>
+            <div class="hero-image hero-animate-delay">
+                <div class="hero-glow"></div>
+                <img id="hero-img" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="بيتزا إيطالية شهية">
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنيو -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">قائمة البيتزا المميزة</h2>
+                <p class="section-subtitle">اختاري النوع والحجم المناسب ليكِ وأضيفيه للسلة بضغطة واحدة</p>
+            </div>
+
+            <!-- شريط البحث والفلترة -->
+            <div class="menu-controls reveal">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="ابحثي عن نوع بيتزا أو مكون...">
+                </div>
+
+                <div class="filter-buttons" id="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="meat">لحوم ودجاج</button>
+                    <button class="filter-btn" data-filter="veg">نباتي وأجبان</button>
+                    <button class="filter-btn" data-filter="spicy">حار 🔥</button>
+                </div>
+            </div>
+
+            <!-- شبكة عرض المنتجات -->
+            <div class="menu-grid" id="menu-grid"></div>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section id="about" class="features">
+        <div class="container">
+            <h2 class="section-title reveal">لماذا بيتزا ماستر؟</h2>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="icon-ring"><i class="fas fa-fire"></i></div>
+                    <h3>فرن حطب أصلي</h3>
+                    <p>خبز على درجة حرارة عالية يمنح العجينة قرمشة خارجية وطراوة من الداخل.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="icon-ring"><i class="fas fa-shipping-fast"></i></div>
+                    <h3>توصيل سريع وساخن</h3>
+                    <p>حافظات حرارية خاصة تضمن وصول الطلب ساخناً في أسرع وقت.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="icon-ring"><i class="fas fa-leaf"></i></div>
+                    <h3>مكونات طازجة 100%</h3>
+                    <p>خضروات طازجة يومياً، لحوم مختارة، وجبن طبيعي عالي الجودة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تواصل معنا -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-box reveal">
+                <div>
+                    <h2>محتاجين مساعدة في طلبك؟</h2>
+                    <p>فريقنا جاهز لاستقبال طلباتكم وملاحظاتكم يومياً من 11 صباحاً حتى 1 بعد منتصف الليل.</p>
+                </div>
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> 19882</span>
+                    <span><i class="fas fa-map-marker-alt"></i> القاهرة - مصر</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container footer-content">
+            <p>جميع الحقوق محفوظة &copy; <span id="year">2026</span> بيتزا ماستر</p>
+        </div>
+    </footer>
+
+    <!-- السلة الجانبية -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar" aria-label="سلة المشتريات">
+        <div class="cart-header">
+            <h3>سلة مشترياتك</h3>
+            <button class="close-cart" id="close-cart-btn" aria-label="إغلاق السلة">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="summary-row">
+                <span>المجموع الفرعي:</span>
+                <span id="cart-subtotal">0 ج.م</span>
+            </div>
+            <div class="summary-row">
+                <span>رسوم التوصيل:</span>
+                <span id="delivery-fee">0 ج.م</span>
+            </div>
+            <div class="total-price">
+                <span>الإجمالي النهائي:</span>
+                <span id="cart-total">0 ج.م</span>
+            </div>
+            <button class="btn-primary checkout-btn" id="open-checkout-btn">إتمام الطلب</button>
+        </div>
+    </aside>
+
+    <!-- نافذة إتمام الطلب -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>تأكيد بيانات التوصيل</h3>
+                <button class="close-cart" id="close-modal-btn" aria-label="إغلاق">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="customer-name">الاسم الكامل</label>
+                    <input type="text" id="customer-name" required placeholder="اكتبي اسمك">
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">رقم الهاتف</label>
+                    <input type="tel" id="customer-phone" required placeholder="01xxxxxxxxx">
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">عنوان التوصيل بالتفصيل</label>
+                    <textarea id="customer-address" rows="3" required placeholder="المنطقة، اسم الشارع، رقم العمارة والشقة"></textarea>
+                </div>
+                <div class="modal-total">
+                    <span>المطلوب دفعه:</span>
+                    <strong id="modal-total-amount">0 ج.م</strong>
+                </div>
+                <button type="submit" class="btn-primary checkout-btn">تأكيد الطلب الآن</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- إشعار منبثق -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
